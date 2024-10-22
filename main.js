@@ -44,18 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       book.title = title.value;
       book.author = author.value;
-      book.year = year.value;
+      book.year = Number(year.value);
       book.isCompleted = isCompleted.checked;
-
-      console.log(book);
     } else {
       const newBook = {
         id: generateId(),
         title: title.value,
         author: author.value,
-        year: year.value,
+        year: Number(year.value),
         isCompleted: isCompleted.checked,
       };
+
       books.push(newBook);
 
       title.value = "";
